@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	 <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	
+  <ItemGroup>
+    <PackageReference Include="OpenTK" Version="4.7.7" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<None Include="Shaders/**" CopyToOutputDirectory="PreserveNewest" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Update="Shader\shader.frag">
+			<CopyToOutputDirectoy>PreserveNewest</CopyToOutputDirectoy>
+		</None>
+		<None Update="Shader\shader.vert">
+			<CopyToOutputDirectoy>PreserveNewest</CopyToOutputDirectoy>
+		</None>
+	</ItemGroup>
+</Project>
